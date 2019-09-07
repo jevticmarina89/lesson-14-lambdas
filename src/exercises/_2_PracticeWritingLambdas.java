@@ -15,14 +15,20 @@ class _2_PracticeWritingLambdas {
 	/* Assign lambda expressions to each of the functions below, so that the tests pass. */
 
 	Function<Integer, Integer> squareLambda = x -> x * x;
-	Function<Integer, Integer> INCREMENT_LAMBDA ;
-	Function<String, String> REMOVE_VOWELS_LAMBDA;
-	Function<Integer, Integer> DOUBLE_LAMBDA;
-	BiFunction<Integer, Integer, Integer> PYTHAGOREAN_LAMBDA;
-	Function<Integer, String> EVEN_ODD_LAMBDA;
-	Function<Character, Integer> ASCII_LAMBDA;
-	Function<String, String> CAPITALIZE_LAMBDA;
-	Function<String, String> BLACKOUT_LAMBDA;
+	Function<Integer, Integer> INCREMENT_LAMBDA = x -> x+1;
+	Function<String, String> REMOVE_VOWELS_LAMBDA  = x -> x.replaceAll("[AaIiEeOoUu]", "");
+	Function<Integer, Integer> DOUBLE_LAMBDA = x -> 2*x;
+	BiFunction<Integer, Integer, Integer> PYTHAGOREAN_LAMBDA = (a,b) -> (int) Math.sqrt(a*a + b*b);
+	Function<Integer, String> EVEN_ODD_LAMBDA = x -> {
+		if (x % 2 == 0) {
+			return "even";
+		} else {
+			return "odd";
+		}
+	};
+	Function<Character, Integer> ASCII_LAMBDA = x -> (int) x;
+	Function<String, String> CAPITALIZE_LAMBDA = x -> x.substring(0,1).toUpperCase() + x.substring(1);
+	Function<String, String> BLACKOUT_LAMBDA = x ->  "#".repeat(x.length());
 	
 	@Test
 	void testIncrement() {
