@@ -15,5 +15,28 @@ public class Planet {
 		this.volume = volume;
 		this.satellites = satellites;
 	}
+
+	public int getDistanceFromSun() {
+		return distanceFromSun;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public double getVolume() {
+		return volume;
+	}
+
+	public int getSatellites() {
+		return satellites;
+	}
+
+	@Override
+	public String toString() {
+		return "Planet [distance from the Sun = " + distanceFromSun + ", name = " + name + ", volume = " + volume + ", satellites = "
+				+ satellites + "]";
+	
+	}
 	
 }
